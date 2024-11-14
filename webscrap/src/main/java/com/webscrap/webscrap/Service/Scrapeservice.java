@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class Scrapreservice {
+public class Scrapeservice {
     public List<String> scrapeData(String url, String keyword) throws IOException {
         Document doc = Jsoup.connect(url).get();
         Elements elements = doc.getElementsContainingText(keyword);

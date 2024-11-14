@@ -1,5 +1,6 @@
 package com.webscrap.webscrap.Configuration;
-import com.webscrap.webscrap.Service.Scrapreservice;
+import com.webscrap.webscrap.Service.Scrapeservice;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
@@ -7,7 +8,7 @@ public class ScheduleScraping {
     @Service
     public class ScheduledScrapingService {
         @Autowired
-        private Scrapreservice webScrapingService;
+        private Scrapeservice webScrapingService;
 
         @Scheduled(fixedRate = 3600000)  // Every hour
         public void scheduleScraping() {
